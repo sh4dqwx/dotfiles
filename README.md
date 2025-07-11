@@ -6,6 +6,7 @@ wsl --install archlinux
 ```
 ### Install necessary packages
 ```bash
+pacman -Syu
 pacman -S base-devel git neovim openssh sudo
 ```
 ### Create and set default user
