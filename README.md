@@ -27,3 +27,11 @@ EDITOR=nvim visudo
 [user]
 default=sh4dqw
 ```
+### Set Git Credential Manager from Windows
+```bash
+git config --global credential.helper "/mnt/path/to/git-credential-manager.exe"
+```
+### After refreshing session clone repo and run init script
+```bash
+git clone 
+```
