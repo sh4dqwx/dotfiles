@@ -4,12 +4,26 @@
 ```bash
 wsl --install archlinux
 ```
+### Install necessary packages
+```bash
+pacman -S base-devel git neovim openssh sudo
+```
 ### Create and set default user
 1. Set password to root user
 ```bash
 passwd
 ```
-2. Create user
+2. Create user and set password
 ```bash
 useradd -m -g users -G wheel sh4dqw
+passwd sh4dqw
+```
+3. Add user to sudoers (uncomment %wheel ALL=(ALL:ALL) ALL)
+```bash
+EDITOR=nvim visudo
+```
+4. Set user to default (add this code to /etc/wsl.conf)
+```bash
+[user]
+default=sh4dqw
 ```
