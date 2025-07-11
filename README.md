@@ -18,11 +18,11 @@ passwd
 useradd -m -g users -G wheel sh4dqw
 passwd sh4dqw
 ```
-3. Add user to sudoers (uncomment %wheel ALL=(ALL:ALL) ALL)
+3. Add user to sudoers (uncomment **%wheel ALL=(ALL:ALL) ALL**)
 ```bash
 EDITOR=nvim visudo
 ```
-4. Set user to default (add this code to /etc/wsl.conf)
+4. Set user to default (add this code to **/etc/wsl.conf**)
 ```bash
 [user]
 default=sh4dqw
