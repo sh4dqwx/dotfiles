@@ -28,6 +28,15 @@ EDITOR=nvim visudo
 [user]
 default=sh4dqw
 ```
+### Set locale
+1. Uncomment en_US.UTF-8
+```bash
+nvim /etc/locale.gen
+```
+2. Generate locale
+```bash
+locale-gen
+```
 ### Set Git Credential Manager from Windows
 ```bash
 git config --global credential.helper "/mnt/path/to/git-credential-manager.exe"
