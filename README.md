@@ -34,8 +34,8 @@ locale-gen
 ```
 ### Install necessary packages
 ```bash
-pacman -Syu --no-confirm
-pacman -S --no-confirm base-devel git less neovim openssh stow sudo
+pacman -Syu --noconfirm
+pacman -S --noconfirm base-devel git less neovim openssh stow sudo
 ```
 ### After refreshing session clone repo and run init script
 ```bash
