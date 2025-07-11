@@ -39,7 +39,7 @@ locale-gen
 ```
 ### Set Git Credential Manager from Windows
 ```bash
-git config --global credential.helper "/mnt/path/to/git-credential-manager.exe"
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 ```
 ### After refreshing session clone repo and run init script
 ```bash
