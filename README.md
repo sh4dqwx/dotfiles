@@ -34,5 +34,5 @@ git config --global credential.helper "/mnt/path/to/git-credential-manager.exe"
 ### After refreshing session clone repo and run init script
 ```bash
 git clone https://github.com/sh4dqwx/dotfiles.git ~/.dotfiles
-source ~/.dotflies/init.sh
+source ~/.dotfiles/init.sh
 ```
