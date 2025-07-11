@@ -7,7 +7,7 @@ wsl --install archlinux
 ### Install necessary packages
 ```bash
 pacman -Syu
-pacman -S base-devel git neovim openssh sudo
+pacman -S base-devel git less neovim openssh sudo
 ```
 ### Create and set default user
 1. Set password to root user
@@ -37,12 +37,9 @@ nvim /etc/locale.gen
 ```bash
 locale-gen
 ```
-### Set Git Credential Manager from Windows
-```bash
-git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
-```
 ### After refreshing session clone repo and run init script
 ```bash
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 git clone https://github.com/sh4dqwx/dotfiles.git ~/.dotfiles
 source ~/.dotfiles/init.sh
 ```
