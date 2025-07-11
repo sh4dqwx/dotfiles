@@ -6,11 +6,11 @@
 wsl --install archlinux
 ```
 2. Create and set default user
-  1. Set password to root user
+    1. Set password to root user
 ```bash
 passwd
 ```
-  2. Create user
+    2. Create user
 ```bash
 useradd -m -g users -G wheel sh4dqw
 ```
