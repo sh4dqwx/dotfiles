@@ -7,7 +7,7 @@ wsl --install archlinux
 ### Install necessary packages
 ```bash
 pacman -Syu --no-confirm
-pacman -S --no-confirm base-devel git less neovim openssh sudo
+pacman -S --no-confirm base-devel git less neovim openssh stow sudo
 ```
 ### Create and set default user
 1. Set password to root user
