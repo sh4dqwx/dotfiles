@@ -15,7 +15,8 @@ mkdir -p ~/dev/tools
 mv ~/.oh-my-zsh ~/dev/tools/oh-my-zsh
 
 # Setting up Neovim
-sudo pacman -S neovim python gcc
+sudo pacman -S neovim python gcc tmux ripgrep fd
+yay -S python312
 
 cd ~/.dotfiles
 stow .
