@@ -4,6 +4,11 @@
 ```bash
 wsl --install archlinux
 ```
+### Install necessary packages
+```bash
+pacman -Syu --noconfirm
+pacman -S --noconfirm base-devel git less neovim openssh stow sudo
+```
 ### Create and set default user
 1. Set password to root user
 ```bash
@@ -31,11 +36,6 @@ nvim /etc/locale.gen
 2. Generate locale
 ```bash
 locale-gen
-```
-### Install necessary packages
-```bash
-pacman -Syu --noconfirm
-pacman -S --noconfirm base-devel git less neovim openssh stow sudo
 ```
 ### After refreshing session clone repo and run init script
 ```bash
