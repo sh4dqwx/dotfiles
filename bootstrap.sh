@@ -16,12 +16,12 @@ mkdir -p $HOME/dev/tools $HOME/dev/private
 # yay -S python312 --noconfirm
 
 # Setting up Zsh and Oh My Zsh
-chsh -s /usr/bin/zsh
+# chsh -s /usr/bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-rm $HOME/.zshrc.pre-oh-my-zsh
+# rm $HOME/.zshrc.pre-oh-my-zsh
 mv $HOME/.oh-my-zsh $HOME/dev/tools/oh-my-zsh
 
 cd $HOME/.dotfiles
-stow .
+stow --adopt .
 
 cd $HOME
