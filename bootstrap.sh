@@ -16,7 +16,10 @@ yay -S go zsh oh-my-zsh-git python gcc tmux ripgrep fd terraform --noconfirm
 # Setting up Zsh as default shell
 chsh -s /usr/bin/zsh
 
+# Creating symlinks for configuration
 cd $HOME/.dotfiles
 stow --adopt .
 
 cd $HOME
+echo "Restarting system NOW!!!"
+reboot
