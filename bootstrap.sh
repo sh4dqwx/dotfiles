@@ -21,5 +21,4 @@ cd $HOME/.dotfiles
 stow --adopt .
 
 cd $HOME
-echo "Restarting system NOW!!!"
-reboot
+echo "Restart system NOW!!!"
