@@ -13,6 +13,9 @@ cd $HOME
 # Install all necessary packages from pacman
 yay -S go zsh oh-my-zsh-git python gcc tmux ripgrep fd terraform wl-clipboard --noconfirm
 
+# Packages for fun
+yay -S cmatrix --noconfirm
+
 # Setting up Zsh as default shell
 chsh -s /usr/bin/zsh
 
