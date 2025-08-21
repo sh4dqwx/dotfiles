@@ -7,7 +7,6 @@ if [[ -d "$project_path/venv" ]]; then
     open_venv_cmd="send-keys 'source venv/bin/activate' C-m \; \\"    
 fi
 
-
 bash -c "tmux new-session -d \; \
     send-keys 'cd $project_path' C-m \; \
     $open_venv_cmd
