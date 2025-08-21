@@ -1,7 +1,6 @@
 local servers = {
     "lua_ls",               -- Lua
     "pylsp",                -- Python
-    -- "r_language_server",    -- R
     "rust_analyzer"         -- Rust
 }
 
@@ -26,10 +25,24 @@ return {
             local lspconfig = require("lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            lspconfig.lua_ls.setup({ capabilities = capabilities })
+            -- Lua LSP configuration
+            lspconfig.lua_ls.setup({
+                capabilities = capabilities,
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            globals = { "vim" }
+                        }
+                    }
+                }
+            })
+
+            -- Python LSP configuration
             lspconfig.pylsp.setup({ capabilities = capabilities })
+
+            -- Rust LSP configuration
             lspconfig.rust_analyzer.setup({ capabilities = capabilities })
-    
+
             require("mason").setup()
             require("mason-lspconfig").setup()
 
