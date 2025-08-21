@@ -21,7 +21,8 @@ chsh -s /usr/bin/zsh
 
 # Creating symlinks for configuration
 cd $HOME/.dotfiles
-stow --adopt .
+stow --adopt nvim
+stop --adopt zsh
 
 cd $HOME
 echo "Restart system NOW!!!"
