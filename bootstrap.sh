@@ -19,10 +19,9 @@ yay -S cmatrix --noconfirm
 # Setting up Zsh as default shell
 chsh -s /usr/bin/zsh
 
-# Creating symlinks for configuration
+# Create/update symlinks for configuration
 cd $HOME/.dotfiles
-stow --adopt nvim
-stop --adopt zsh
+./update_symlinks.sh
 
 cd $HOME
 echo "Restart system NOW!!!"
