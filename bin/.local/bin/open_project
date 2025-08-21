@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+project_path=$HOME/dev/$1
+
+open_venv_cmd="\\"
+if [[ -d "$project_path/venv" ]]; then
+    open_venv_cmd="send-keys 'source venv/bin/activate' C-m \; \\"    
+fi
+
+
+bash -c "tmux new-session -d \; \
+    send-keys 'cd $project_path' C-m \; \
+    $open_venv_cmd
+    send-keys 'clear' C-m \; \
+    send-keys 'nvim .' C-m \; \
+    split-window -h -l 10 \; \
+    send-keys 'cd $project_path' C-m \; \
+    $open_venv_cmd
+    send-keys 'clear' C-m \; \
+    select-pane -t 0 \; \
+    attach"

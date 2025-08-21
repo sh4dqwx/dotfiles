@@ -41,6 +41,7 @@ locale-gen
 ```bash
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 git config --global credential.https://dev.azure.com.useHttpPath true
+git config --global init.defaultBranch main
 git clone https://github.com/sh4dqwx/dotfiles.git ~/.dotfiles
 ~/.dotfiles/bootstrap.sh
 ```
