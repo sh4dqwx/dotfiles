@@ -1,2 +1,6 @@
 # Go Telemetry values
 .config/go/*
+
+# Local share/state values
+bin/.local/share/*
+bin/.local/state/*
