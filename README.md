@@ -1,4 +1,13 @@
 # My Arch Linux configuration
+## WSL Setup Guide (NEW)
+### Install Arch Linux distro in WSL
+```bash
+wsl --install archlinux
+```
+### Run init script
+```bash
+curl -fsSL https://raw.githubusercontent.com/sh4dqw/dotfiles/main/init_wsl.sh | bash
+```
 ## WSL setup guide
 ### Install Arch Linux distro in WSL
 ```bash
