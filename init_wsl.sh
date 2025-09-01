@@ -41,7 +41,7 @@ main() {
 		esac
 	done
 
-	pacman -S sudo --noconfirm
+	pacman -S base-devel fd gcc go imagemagick less neovim openssh python ripgrep stow sudo terraform tmux wl-clipboard zsh --noconfirm
 
 	set_password "root" $ROOT_PASSWORD
 	create_user $USERNAME $PASSWORD
