@@ -6,7 +6,8 @@ wsl --install archlinux
 ```
 ### Run init script
 ```bash
-curl -fsSL https://raw.githubusercontent.com/sh4dqw/dotfiles/main/init_wsl.sh | bash
+curl -fsSL https://raw.githubusercontent.com/sh4dqw/dotfiles/main/init_wsl.sh \
+    | bash -s -- --root_password [root_password] --username [username] --password [password]
 ```
 ## WSL setup guide
 ### Install Arch Linux distro in WSL
