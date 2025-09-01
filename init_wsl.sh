@@ -41,6 +41,10 @@ main() {
 		esac
 	done
 
+	sed -i '/en_US.UTF-8/s/^#//' /etc/locale.gen
+	locale-gen
+	
+	pacman -Syu --noconfirm
 	pacman -S base-devel fd gcc go imagemagick less neovim openssh python ripgrep stow sudo terraform tmux wl-clipboard zsh --noconfirm
 
 	set_password "root" $ROOT_PASSWORD
@@ -48,8 +52,6 @@ main() {
 
 	sed -i '/%wheel ALL=(ALL:ALL) ALL/s/^# //' /etc/sudoers
 	echo -e "\n[user]\ndefault=$USERNAME" >> /etc/wsl.conf
-	sed -i '/en_US.UTF-8/s/^#//' /etc/locale.gen
-	locale-gen
 }
 
 main $@
