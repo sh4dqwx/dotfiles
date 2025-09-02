@@ -6,7 +6,7 @@ wsl --install archlinux
 ```
 ### Run init script
 ```bash
-curl -fsSL https://raw.githubusercontent.com/sh4dqw/dotfiles/main/init_wsl.sh | bash -s -- \
+curl -fsSL https://raw.githubusercontent.com/sh4dqwx/dotfiles/main/init_wsl.sh | bash -s -- \
 --root_password [root_password]
 --username [username]
 --password [password]
