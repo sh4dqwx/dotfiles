@@ -47,12 +47,17 @@ main() {
 	pacman -Syu --noconfirm
 	pacman -S base-devel cmatrix fd gcc git go imagemagick less lolcat neovim openssh python ripgrep stow sudo terraform tmux wl-clipboard zsh --noconfirm
 
+	echo "Creating user $USERNAME..."
 	set_password "root" $ROOT_PASSWORD
 	create_user $USERNAME $PASSWORD
 
+	echo "Adding user $USERNAME to sudoers..."
 	sed -i '/%wheel ALL=(ALL:ALL) ALL/s/^# //' /etc/sudoers
+	
+	echo "Setting user $USERNAME as default user in WSL..."
 	echo -e "\n[user]\ndefault=$USERNAME" >> /etc/wsl.conf
 
+	echo "Configuring user $USERNAME..."
 	sudo -u $USERNAME bash <<EOF
 	git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 	git config --global credential.https://dev.azure.com.useHttpPath true
