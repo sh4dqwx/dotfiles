@@ -60,7 +60,7 @@ main() {
 	git config --global pull.rebase false
 	git config --global core.editor "nvim"
 	git clone https://github.com/sh4dqwx/dotfiles.git ~/.dotfiles
-	EOF
+EOF
 }
 
 main $@
