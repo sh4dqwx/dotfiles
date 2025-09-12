@@ -10,6 +10,9 @@ cd $HOME/dev/tools/yay
 makepkg -si
 cd $HOME
 
+# Install Oh My Z-Shell
+yay -S oh-my-zsh-git
+
 # Setting up Zsh as default shell
 chsh -s /usr/bin/zsh
 
