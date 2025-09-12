@@ -45,7 +45,7 @@ main() {
 	locale-gen
 	
 	pacman -Syu --noconfirm
-	pacman -S base-devel fd gcc git go imagemagick less neovim openssh python ripgrep stow sudo terraform tmux wl-clipboard zsh --noconfirm
+	pacman -S base-devel cmatrix fd gcc git go imagemagick less lolcat neovim openssh python ripgrep stow sudo terraform tmux wl-clipboard zsh --noconfirm
 
 	set_password "root" $ROOT_PASSWORD
 	create_user $USERNAME $PASSWORD
@@ -60,6 +60,7 @@ main() {
 	git config --global pull.rebase false
 	git config --global core.editor "nvim"
 	git clone https://github.com/sh4dqwx/dotfiles.git ~/.dotfiles
+	~/.dotfiles/bootstrap.sh
 EOF
 }
 
