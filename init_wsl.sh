@@ -15,6 +15,8 @@ main() {
 	ROOT_PASSWORD=""
 	USERNAME=""
 	PASSWORD=""
+	GIT_USERNAME=""
+	GIT_EMAIL=""
 
 	if [[ $# -eq 0 ]]; then
 		echo "No arguments passed"
@@ -32,6 +34,14 @@ main() {
 				;;
 			--password)
 				PASSWORD="$2"
+				shift 2
+				;;
+			--git_username)
+				GIT_USERNAME="$2"
+				shift 2
+				;;
+			--git_email)
+				GIT_EMAIL="$2"
 				shift 2
 				;;
 			*)
@@ -64,8 +74,9 @@ main() {
 	git config --global init.defaultBranch main
 	git config --global pull.rebase false
 	git config --global core.editor "nvim"
+	git config --global user.email $GIT_EMAIL
+	git config --global user.name $GIT_USERNAME
 	git clone https://github.com/sh4dqwx/dotfiles.git ~/.dotfiles
-	~/.dotfiles/bootstrap.sh
 EOF
 }
 
