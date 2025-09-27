@@ -9,7 +9,9 @@ wsl --install archlinux
 curl -fsSL https://raw.githubusercontent.com/sh4dqwx/dotfiles/main/init_wsl.sh | bash -s -- \
 --root_password [root_password] \
 --username [username] \
---password [password]
+--password [password] \
+--git_username [git_username] \
+--git_email [git_email]
 ```
 ### After refreshing session and entering Linux as created user, run bootstrap script for configuring user's environment
 ```bash
