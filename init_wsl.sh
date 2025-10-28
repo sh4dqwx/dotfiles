@@ -55,7 +55,7 @@ main() {
 	locale-gen
 	
 	pacman -Syu --noconfirm
-	pacman -S base-devel cmatrix fd gcc git go imagemagick less lolcat neovim openssh python ripgrep rustup stow sudo terraform tmux wl-clipboard zsh --noconfirm
+	pacman -S base-devel cmatrix fd gcc git go imagemagick less lolcat neovim openssh python ripgrep stow sudo terraform tmux uv wl-clipboard zsh --noconfirm
     rustup default stable
 
 	echo "Creating user $USERNAME..."
