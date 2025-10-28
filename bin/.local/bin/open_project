@@ -12,7 +12,7 @@ bash -c "tmux new-session -d \; \
     $open_venv_cmd
     send-keys 'clear' C-m \; \
     send-keys 'nvim .' C-m \; \
-    split-window -h -l 10 \; \
+    split-window -h -l 5 \; \
     send-keys 'cd $project_path' C-m \; \
     $open_venv_cmd
     send-keys 'clear' C-m \; \
