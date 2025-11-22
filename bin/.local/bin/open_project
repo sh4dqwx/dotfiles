@@ -3,7 +3,7 @@
 project_path=$HOME/dev/$1
 
 open_venv_cmd="\\"
-if [[ -d "$project_path/venv" ]]; then
+if [[ -d "$project_path/.venv" ]]; then
     open_venv_cmd="send-keys 'source venv/bin/activate' C-m \; \\"    
 fi
 
